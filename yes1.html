@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .calendar {
+      display: none;
+      margin-top: 20px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: center;
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div>
+      <h1 class="header_text">Yeeyy! Finally</h1>
+    </div>
+    <div class="gif_container">
+      <img
+        src="https://i.postimg.cc/wTDG30TB/yes.gif"
+        alt="Cute animated illustration"
+      />
+    </div>
+    <button class="btn" id="yesButton" onclick="openCalendar()">
+      Let's Fix a Date
+    </button>
+
+    <!-- Calendar -->
+    <div id="calendar" class="calendar">
+      <h2>February 2023</h2>
+      <table>
+        <tr>
+          <th>Sun</th>
+          <th>Mon</th>
+          <th>Tue</th>
+          <th>Wed</th>
+          <th>Thu</th>
+          <th>Fri</th>
+          <th>Sat</th>
+        </tr>
+        <tr>
+          <td onclick="selectDate(7)">7</td>
+          <td onclick="selectDate(8)">8</td>
+          <td onclick="selectDate(9)">9</td>
+          <td onclick="selectDate(10)">10</td>
+          <td onclick="selectDate(11)">11</td>
+          <td onclick="selectDate(12)">12</td>
+          <td onclick="selectDate(13)">13</td>
+        </tr>
+        <!-- Add more rows for other weeks -->
+      </table>
+    </div>
+    <!-- End Calendar -->
+
+  </div>
+
+  <script>
+    function openCalendar() {
+      var calendar = document.getElementById("calendar");
+      calendar.style.display = "block";
+      // You can add more logic to populate the calendar dynamically.
+    }
+
+    function selectDate(date) {
+      alert("Selected Date: February " + date + ", 2023");
+      // Add your logic here for handling the selected date
+    }
+  </script>
+</body>
+</html>
